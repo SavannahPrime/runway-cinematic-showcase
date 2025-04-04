@@ -1,0 +1,14 @@
+
+Place project images here:
+- project1.jpg
+- project1-2.jpg
+- project2.jpg
+- project2-2.jpg
+- project3.jpg
+- project3-2.jpg
+- project4.jpg
+- project4-2.jpg
+- project5.jpg
+- project5-2.jpg
+- project6.jpg
+- project6-2.jpg

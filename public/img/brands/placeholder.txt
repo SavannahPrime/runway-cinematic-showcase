@@ -1,0 +1,7 @@
+
+Place brand logos here:
+- gucci.svg
+- dior.svg
+- vogue.svg
+- prada.svg
+- chanel.svg
