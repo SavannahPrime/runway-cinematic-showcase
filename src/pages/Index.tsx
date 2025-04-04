@@ -18,9 +18,9 @@ const featuredProjects = [
     date: 'June 2023',
     thumbnail: '/img/projects/project1.jpg',
     images: ['/img/projects/project1.jpg', '/img/projects/project1-2.jpg'],
-    description: 'A stunning summer campaign showcasing Gucci's latest collection with a focus on lightweight fabrics and vibrant colors.',
+    description: 'A stunning summer campaign showcasing Gucci\'s latest collection with a focus on lightweight fabrics and vibrant colors.',
     credits: 'Photography: Alex Johnson, Styling: Maria Rodriguez',
-    video: '/videos/behind-scenes-1.mp4',
+    video: '/videos/behind-scenes-1.mp4'
   },
   {
     id: '2',
@@ -31,7 +31,7 @@ const featuredProjects = [
     thumbnail: '/img/projects/project2.jpg',
     images: ['/img/projects/project2.jpg', '/img/projects/project2-2.jpg'],
     description: 'A bold winter editorial for Vogue featuring avant-garde styling and dramatic settings.',
-    credits: 'Photography: Sophie Turner, Styling: Jean Claude',
+    credits: 'Photography: Sophie Turner, Styling: Jean Claude'
   },
   {
     id: '3',
@@ -41,10 +41,10 @@ const featuredProjects = [
     date: 'April 2024',
     thumbnail: '/img/projects/project3.jpg',
     images: ['/img/projects/project3.jpg', '/img/projects/project3-2.jpg'],
-    description: 'An exclusive resort campaign shot in the Maldives, highlighting Prada's new beachwear collection.',
+    description: 'An exclusive resort campaign shot in the Maldives, highlighting Prada\'s new beachwear collection.',
     credits: 'Photography: Michael Brown, Styling: Lisa Wong',
-    video: '/videos/behind-scenes-2.mp4',
-  },
+    video: '/videos/behind-scenes-2.mp4'
+  }
 ];
 
 const Index = () => {

@@ -25,16 +25,16 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl font-playfair mb-8">Biography</h2>
               <div className="space-y-6 text-charcoal/80">
                 <p>
-                  Beginning a modeling career at the age of 18, I quickly established myself within the industry, signing with Elite Model Management and booking my first major campaign within six months. Over the years, I've had the privilege of working with some of the world's most prestigious fashion houses and publications.
+                  Beginning a modeling career at the age of 18, I quickly established myself within the industry, signing with Elite Model Management and booking my first major campaign within six months. Over the years, I&apos;ve had the privilege of working with some of the world&apos;s most prestigious fashion houses and publications.
                 </p>
                 <p>
                   My work spans editorial, runway, commercial campaigns, and brand ambassadorships. With a natural adaptability and strong work ethic, I bring professionalism and versatility to every project, allowing me to interpret and embody diverse creative visions.
                 </p>
                 <p>
-                  Based in New York but constantly traveling for work between Milan, Paris, London, and Tokyo, I've developed a global perspective and appreciation for different cultures and aesthetics. This international experience informs my approach to modeling and enables me to connect with diverse creative teams.
+                  Based in New York but constantly traveling for work between Milan, Paris, London, and Tokyo, I&apos;ve developed a global perspective and appreciation for different cultures and aesthetics. This international experience informs my approach to modeling and enables me to connect with diverse creative teams.
                 </p>
                 <p>
-                  Beyond modeling, I'm passionate about sustainable fashion and supporting emerging designers who prioritize ethical practices. I believe the fashion industry has tremendous power to influence positive change, and I'm committed to using my platform to advocate for more inclusive, sustainable approaches.
+                  Beyond modeling, I&apos;m passionate about sustainable fashion and supporting emerging designers who prioritize ethical practices. I believe the fashion industry has tremendous power to influence positive change, and I&apos;m committed to using my platform to advocate for more inclusive, sustainable approaches.
                 </p>
               </div>
               
@@ -156,36 +156,36 @@ const timelineItems = [
   {
     year: '2024',
     title: 'Global Ambassador for Luxury Brand',
-    description: 'Appointed as the worldwide face of a leading luxury fashion house's annual campaigns.',
+    description: 'Appointed as the worldwide face of a leading luxury fashion house\'s annual campaigns.',
     location: 'Worldwide',
-    achievement: 'Featured on 12 international magazine covers',
+    achievement: 'Featured on 12 international magazine covers'
   },
   {
     year: '2022-2023',
     title: 'Exclusive Contract with Major Fashion Label',
     description: 'Secured an exclusive modeling contract for runway and editorial campaigns.',
-    location: 'Paris, France',
+    location: 'Paris, France'
   },
   {
     year: '2020-2021',
     title: 'International Runway Circuit',
     description: 'Featured in over 40 runway shows for top designers across the major fashion weeks.',
     location: 'New York, Milan, Paris, London',
-    achievement: 'Opened 5 major shows',
+    achievement: 'Opened 5 major shows'
   },
   {
     year: '2018-2019',
     title: 'First Major Magazine Cover',
     description: 'Breakthrough career moment with cover and 12-page editorial in leading fashion publication.',
     location: 'Milan, Italy',
-    achievement: 'Best Newcomer Award',
+    achievement: 'Best Newcomer Award'
   },
   {
     year: '2016-2017',
     title: 'Agency Signing & First Campaign',
     description: 'Signed with elite modeling agency and landed first major advertising campaign.',
-    location: 'New York, USA',
-  },
+    location: 'New York, USA'
+  }
 ];
 
 export default About;

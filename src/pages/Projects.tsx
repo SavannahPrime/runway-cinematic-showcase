@@ -16,10 +16,10 @@ const allProjects = [
     date: 'June 2023',
     thumbnail: '/img/projects/project1.jpg',
     images: ['/img/projects/project1.jpg', '/img/projects/project1-2.jpg'],
-    description: 'A stunning summer campaign showcasing Gucci's latest collection with a focus on lightweight fabrics and vibrant colors.',
+    description: 'A stunning summer campaign showcasing Gucci\'s latest collection with a focus on lightweight fabrics and vibrant colors.',
     credits: 'Photography: Alex Johnson, Styling: Maria Rodriguez',
     video: '/videos/behind-scenes-1.mp4',
-    category: 'Campaign',
+    category: 'Campaign'
   },
   {
     id: '2',
@@ -31,7 +31,7 @@ const allProjects = [
     images: ['/img/projects/project2.jpg', '/img/projects/project2-2.jpg'],
     description: 'A bold winter editorial for Vogue featuring avant-garde styling and dramatic settings.',
     credits: 'Photography: Sophie Turner, Styling: Jean Claude',
-    category: 'Editorial',
+    category: 'Editorial'
   },
   {
     id: '3',
@@ -41,10 +41,10 @@ const allProjects = [
     date: 'April 2024',
     thumbnail: '/img/projects/project3.jpg',
     images: ['/img/projects/project3.jpg', '/img/projects/project3-2.jpg'],
-    description: 'An exclusive resort campaign shot in the Maldives, highlighting Prada's new beachwear collection.',
+    description: 'An exclusive resort campaign shot in the Maldives, highlighting Prada\'s new beachwear collection.',
     credits: 'Photography: Michael Brown, Styling: Lisa Wong',
     video: '/videos/behind-scenes-2.mp4',
-    category: 'Campaign',
+    category: 'Campaign'
   },
   {
     id: '4',
@@ -54,9 +54,9 @@ const allProjects = [
     date: 'March 2024',
     thumbnail: '/img/projects/project4.jpg',
     images: ['/img/projects/project4.jpg', '/img/projects/project4-2.jpg'],
-    description: 'Opening look for Dior's Fall/Winter runway show at Paris Fashion Week.',
+    description: 'Opening look for Dior\'s Fall/Winter runway show at Paris Fashion Week.',
     credits: 'Photography: Jean Martin',
-    category: 'Runway',
+    category: 'Runway'
   },
   {
     id: '5',
@@ -66,9 +66,9 @@ const allProjects = [
     date: 'May 2023',
     thumbnail: '/img/projects/project5.jpg',
     images: ['/img/projects/project5.jpg', '/img/projects/project5-2.jpg'],
-    description: 'The launch campaign for Chanel's newest signature fragrance.',
+    description: 'The launch campaign for Chanel\'s newest signature fragrance.',
     credits: 'Photography: Emily Watson, Creative Direction: Karl Thomson',
-    category: 'Commercial',
+    category: 'Commercial'
   },
   {
     id: '6',
@@ -78,10 +78,10 @@ const allProjects = [
     date: 'September 2023',
     thumbnail: '/img/projects/project6.jpg',
     images: ['/img/projects/project6.jpg', '/img/projects/project6-2.jpg'],
-    description: 'Showcasing Versace's vibrant spring collection on the runway in Milan.',
+    description: 'Showcasing Versace\'s vibrant spring collection on the runway in Milan.',
     credits: 'Photography: Marco Rossi',
-    category: 'Runway',
-  },
+    category: 'Runway'
+  }
 ];
 
 const Projects = () => {
