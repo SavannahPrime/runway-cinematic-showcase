@@ -9,6 +9,7 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ModelSpotlight from '@/components/home/ModelSpotlight';
 import Testimonials from '@/components/home/Testimonials';
+import BookingCTA from '@/components/home/BookingCTA';
 
 // Sample projects data
 const featuredProjects = [
@@ -84,14 +85,14 @@ const Index = () => {
       {/* Hero section with improved animations */}
       <HeroCarousel />
       
-      {/* Model spotlight - new section highlighting the model */}
+      {/* Model spotlight - prominently featured section */}
       <ModelSpotlight />
       
-      {/* Brands section with animation */}
-      <BrandsSection className="scroll-animate opacity-0" />
-      
-      {/* Intro section with story */}
+      {/* Career highlights and achievements */}
       <IntroSection />
+      
+      {/* Brands worked with section */}
+      <BrandsSection className="scroll-animate opacity-0" />
       
       {/* Featured Projects with animation */}
       <section className="py-24 bg-black" ref={featuredRef}>
@@ -108,8 +109,11 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Testimonials section */}
+      {/* Client testimonials */}
       <Testimonials />
+      
+      {/* Booking call-to-action */}
+      <BookingCTA />
     </PageLayout>
   );
 };

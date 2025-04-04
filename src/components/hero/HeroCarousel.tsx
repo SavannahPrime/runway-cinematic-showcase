@@ -67,72 +67,78 @@ const HeroCarousel: React.FC = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       nextSlide();
-    }, 10000);
+    }, 8000);
 
     return () => clearInterval(intervalId);
   }, [currentSlide, isTransitioning]);
 
   return (
     <div className="relative h-screen w-full overflow-hidden bg-black">
-      {slides.map((slide, index) => (
-        <div 
-          key={slide.id}
-          className={cn(
-            "absolute inset-0 transition-all duration-1500 ease-in-out",
-            currentSlide === index ? "opacity-100 z-10" : "opacity-0 z-0",
-            isTransitioning && currentSlide === index && animationDirection === 'right' ? "animate-slide-in-right" : "",
-            isTransitioning && currentSlide === index && animationDirection === 'left' ? "animate-slide-in-left" : ""
-          )}
-        >
+      {slides.map((slide, index) => {
+        // Preload images for smooth transitions
+        const imgPreload = new Image();
+        imgPreload.src = slide.image;
+        
+        return (
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-10000 ease-out transform scale-[1.03] hover:scale-100"
-            style={{
-              backgroundImage: `url(${slide.image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          />
-          <div 
-            className="absolute inset-0 bg-black" 
-            style={{ opacity: slide.overlayOpacity || 0.3 }} 
-          />
-          
-          <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-white">
-            <h1 
-              className={cn(
-                "text-4xl md:text-6xl lg:text-7xl font-playfair font-bold mb-6 transform transition-all duration-1000",
-                currentSlide === index ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-              )}
-              style={{ transitionDelay: '300ms' }}
-            >
-              {slide.title}
-            </h1>
-            {slide.subtitle && (
-              <p 
+            key={slide.id}
+            className={cn(
+              "absolute inset-0 transition-all duration-1500 ease-in-out",
+              currentSlide === index ? "opacity-100 z-10" : "opacity-0 z-0",
+              isTransitioning && currentSlide === index && animationDirection === 'right' ? "animate-slide-in-right" : "",
+              isTransitioning && currentSlide === index && animationDirection === 'left' ? "animate-slide-in-left" : ""
+            )}
+          >
+            <div 
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-10000 ease-out transform scale-[1.03] hover:scale-100"
+              style={{
+                backgroundImage: `url(${slide.image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            />
+            <div 
+              className="absolute inset-0 bg-black" 
+              style={{ opacity: slide.overlayOpacity || 0.3 }} 
+            />
+            
+            <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-white">
+              <h1 
                 className={cn(
-                  "text-lg md:text-xl uppercase tracking-widest font-light transform transition-all duration-1000",
+                  "text-4xl md:text-6xl lg:text-7xl font-playfair font-bold mb-6 transform transition-all duration-1000",
                   currentSlide === index ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                 )}
-                style={{ transitionDelay: '600ms' }}
+                style={{ transitionDelay: '300ms' }}
               >
-                {slide.subtitle}
-              </p>
-            )}
-            
-            <div 
-              className={cn(
-                "mt-12 transform transition-all duration-1000",
-                currentSlide === index ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                {slide.title}
+              </h1>
+              {slide.subtitle && (
+                <p 
+                  className={cn(
+                    "text-lg md:text-xl uppercase tracking-widest font-light transform transition-all duration-1000",
+                    currentSlide === index ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                  )}
+                  style={{ transitionDelay: '600ms' }}
+                >
+                  {slide.subtitle}
+                </p>
               )}
-              style={{ transitionDelay: '900ms' }}
-            >
-              <button className="luxury-button bg-white/10 backdrop-blur-sm hover:bg-white border border-white/30">
-                Discover More
-              </button>
+              
+              <div 
+                className={cn(
+                  "mt-12 transform transition-all duration-1000",
+                  currentSlide === index ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                )}
+                style={{ transitionDelay: '900ms' }}
+              >
+                <Link to="/projects" className="luxury-button bg-white/10 backdrop-blur-sm hover:bg-white border border-white/30 hover:text-black">
+                  View Portfolio
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
 
       {/* Navigation Arrows with improved styles */}
       <div className="absolute inset-x-0 bottom-1/2 flex items-center justify-between px-4 md:px-12">

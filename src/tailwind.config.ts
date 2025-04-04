@@ -98,6 +98,10 @@ export default {
         'scale-in': {
           '0%': { transform: 'scale(0.95)', opacity: '0' },
           '100%': { transform: 'scale(1)', opacity: '1' }
+        },
+        'pulse-subtle': {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.8' }
         }
 			},
 			animation: {
@@ -109,6 +113,7 @@ export default {
         'slide-in-right': 'slide-in-right 1.2s ease-out',
         'slide-in-left': 'slide-in-left 1.2s ease-out',
         'scale-in': 'scale-in 0.8s ease-out',
+        'pulse-subtle': 'pulse-subtle 3s infinite ease-in-out',
 			},
       transitionDuration: {
         '1500': '1500ms',
