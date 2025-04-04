@@ -38,17 +38,17 @@ const IntroSection: React.FC = () => {
       <div className="container-custom relative">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
           <div className="lg:w-1/2 space-y-6 opacity-0 transform translate-y-8" style={{animationFillMode: 'forwards'}}>
-            <h2 className="font-playfair text-4xl md:text-5xl font-medium tracking-tight">
+            <h2 className="font-playfair text-4xl md:text-5xl font-medium tracking-tight text-[#1A1F3A]">
               Crafting Elegance <br />in Every Frame
             </h2>
-            <p className="text-charcoal/80 leading-relaxed">
+            <p className="text-[#1A1F3A]/80 leading-relaxed">
               With over a decade of experience in high-fashion modeling, each project is approached with professionalism, creativity, and an unwavering commitment to excellence. From editorial shoots to runway shows, the goal is to bring each designer's vision to life with authenticity and precision.
             </p>
-            <p className="text-charcoal/80 leading-relaxed">
+            <p className="text-[#1A1F3A]/80 leading-relaxed">
               Featured in leading publications and collaborating with renowned brands worldwide, the portfolio reflects versatility and a unique ability to transform for each creative brief while maintaining a distinctive presence.
             </p>
             <div className="pt-4">
-              <Link to="/about" className="luxury-button group">
+              <Link to="/about" className="luxury-button bg-[#1A1F3A] text-white hover:bg-gold hover:text-[#1A1F3A] group">
                 <span>Learn more</span>
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>

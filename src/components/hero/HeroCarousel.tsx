@@ -18,21 +18,21 @@ const slides: HeroSlide[] = [
     image: '/img/hero/hero-1.jpg',
     title: 'Campaign 2025',
     subtitle: 'Paris Fashion Week',
-    overlayOpacity: 0.3
+    overlayOpacity: 0.5
   },
   {
     id: 2,
     image: '/img/hero/hero-2.jpg',
     title: 'Vogue Italia',
     subtitle: 'Editorial Spotlight',
-    overlayOpacity: 0.4
+    overlayOpacity: 0.5
   },
   {
     id: 3,
     image: '/img/hero/hero-3.jpg',
     title: 'Modern Elegance',
     subtitle: 'New York',
-    overlayOpacity: 0.25
+    overlayOpacity: 0.5
   }
 ];
 
@@ -74,7 +74,7 @@ const HeroCarousel: React.FC = () => {
   }, [currentSlide, isTransitioning]);
 
   return (
-    <div className="relative h-screen w-full overflow-hidden bg-black">
+    <div className="relative h-screen w-full overflow-hidden bg-[#1A1F3A]">
       {slides.map((slide, index) => {
         // Preload images for smooth transitions
         const imgPreload = new Image();
@@ -99,42 +99,44 @@ const HeroCarousel: React.FC = () => {
               }}
             />
             <div 
-              className="absolute inset-0 bg-black" 
-              style={{ opacity: slide.overlayOpacity || 0.3 }} 
+              className="absolute inset-0 bg-[#1A1F3A]" 
+              style={{ opacity: slide.overlayOpacity || 0.5 }} 
             />
             
             <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-white">
-              <h1 
-                className={cn(
-                  "text-4xl md:text-6xl lg:text-7xl font-playfair font-bold mb-6 transform transition-all duration-1000",
-                  currentSlide === index ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-                )}
-                style={{ transitionDelay: '300ms' }}
-              >
-                {slide.title}
-              </h1>
-              {slide.subtitle && (
-                <p 
+              <div className="max-w-3xl px-6 py-8 bg-[#1A1F3A]/70 backdrop-blur-md rounded-lg border border-white/10">
+                <h1 
                   className={cn(
-                    "text-lg md:text-xl uppercase tracking-widest font-light transform transition-all duration-1000",
+                    "text-4xl md:text-6xl lg:text-7xl font-playfair font-bold mb-6 transform transition-all duration-1000",
                     currentSlide === index ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                   )}
-                  style={{ transitionDelay: '600ms' }}
+                  style={{ transitionDelay: '300ms' }}
                 >
-                  {slide.subtitle}
-                </p>
-              )}
-              
-              <div 
-                className={cn(
-                  "mt-12 transform transition-all duration-1000",
-                  currentSlide === index ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                  {slide.title}
+                </h1>
+                {slide.subtitle && (
+                  <p 
+                    className={cn(
+                      "text-lg md:text-xl uppercase tracking-widest font-light transform transition-all duration-1000",
+                      currentSlide === index ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                    )}
+                    style={{ transitionDelay: '600ms' }}
+                  >
+                    {slide.subtitle}
+                  </p>
                 )}
-                style={{ transitionDelay: '900ms' }}
-              >
-                <Link to="/projects" className="luxury-button bg-white/10 backdrop-blur-sm hover:bg-white border border-white/30 hover:text-black">
-                  View Portfolio
-                </Link>
+                
+                <div 
+                  className={cn(
+                    "mt-12 transform transition-all duration-1000",
+                    currentSlide === index ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                  )}
+                  style={{ transitionDelay: '900ms' }}
+                >
+                  <Link to="/projects" className="luxury-button bg-white/10 backdrop-blur-sm hover:bg-white border border-white/30 hover:text-[#1A1F3A]">
+                    View Portfolio
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -145,14 +147,14 @@ const HeroCarousel: React.FC = () => {
       <div className="absolute inset-x-0 bottom-1/2 flex items-center justify-between px-4 md:px-12">
         <button
           onClick={prevSlide}
-          className="p-3 rounded-full bg-black/30 text-white hover:bg-black/50 transition-all transform hover:scale-110"
+          className="p-3 rounded-full bg-[#1A1F3A]/40 text-white hover:bg-[#1A1F3A]/70 transition-all transform hover:scale-110"
           aria-label="Previous slide"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
         <button
           onClick={nextSlide}
-          className="p-3 rounded-full bg-black/30 text-white hover:bg-black/50 transition-all transform hover:scale-110"
+          className="p-3 rounded-full bg-[#1A1F3A]/40 text-white hover:bg-[#1A1F3A]/70 transition-all transform hover:scale-110"
           aria-label="Next slide"
         >
           <ChevronRight className="w-6 h-6" />

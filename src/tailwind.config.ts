@@ -56,6 +56,7 @@ export default {
         gold: '#D4AF37',
         cream: '#F7F2E4',
         charcoal: '#333333',
+        navy: '#1A1F3A',
 			},
 			fontFamily: {
 				playfair: ['Playfair Display', 'serif'],
