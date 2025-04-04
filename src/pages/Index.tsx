@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import PageLayout from '@/components/layout/PageLayout';
 import HeroCarousel from '@/components/hero/HeroCarousel';
 import BrandsSection from '@/components/home/BrandsSection';
@@ -7,6 +7,8 @@ import IntroSection from '@/components/home/IntroSection';
 import ProjectGrid from '@/components/projects/ProjectGrid';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import ModelSpotlight from '@/components/home/ModelSpotlight';
+import Testimonials from '@/components/home/Testimonials';
 
 // Sample projects data
 const featuredProjects = [
@@ -48,17 +50,53 @@ const featuredProjects = [
 ];
 
 const Index = () => {
+  // Ref for scroll animations
+  const featuredRef = useRef<HTMLDivElement>(null);
+  
+  // Handle scroll animations
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-up');
+            entry.target.classList.remove('opacity-0');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    
+    const sections = document.querySelectorAll('.scroll-animate');
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+    
+    return () => {
+      sections.forEach(section => {
+        observer.unobserve(section);
+      });
+    };
+  }, []);
+  
   return (
     <PageLayout>
+      {/* Hero section with improved animations */}
       <HeroCarousel />
       
-      <BrandsSection className="animate-fade-up" />
+      {/* Model spotlight - new section highlighting the model */}
+      <ModelSpotlight />
       
+      {/* Brands section with animation */}
+      <BrandsSection className="scroll-animate opacity-0" />
+      
+      {/* Intro section with story */}
       <IntroSection />
       
-      <section className="py-24 bg-black">
+      {/* Featured Projects with animation */}
+      <section className="py-24 bg-black" ref={featuredRef}>
         <div className="container-custom">
-          <div className="flex flex-col md:flex-row justify-between items-center mb-16">
+          <div className="flex flex-col md:flex-row justify-between items-center mb-16 scroll-animate opacity-0">
             <h2 className="font-playfair text-4xl text-white mb-6 md:mb-0">Featured Projects</h2>
             <Link to="/projects" className="luxury-button bg-transparent border border-white/20 hover:bg-white hover:text-black group">
               <span>View all projects</span>
@@ -66,9 +104,12 @@ const Index = () => {
             </Link>
           </div>
           
-          <ProjectGrid projects={featuredProjects} />
+          <ProjectGrid projects={featuredProjects} className="scroll-animate opacity-0" />
         </div>
       </section>
+      
+      {/* Testimonials section */}
+      <Testimonials />
     </PageLayout>
   );
 };
